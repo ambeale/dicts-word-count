@@ -1,4 +1,6 @@
 # put your code here.
+import string
+
 def get_word_count(filename):
 	""" Read text file and return dictionary of word count 
 		
@@ -12,7 +14,9 @@ def get_word_count(filename):
 	for line in poem:
 		line = line.strip()
 		words = line.split(" ")
+		
 		for word in words:
+			word = word.strip(string.punctuation)
 			word_count[word.lower()] = word_count.get(word.lower(),0) + 1
 
 	for k,v in word_count.items():
@@ -22,4 +26,4 @@ def get_word_count(filename):
 	#return word_count
 
 get_word_count("test.txt")
-get_word_count("twain.txt")
+#get_word_count("twain.txt")
