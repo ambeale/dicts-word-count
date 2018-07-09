@@ -19,7 +19,11 @@ def get_word_count(filename):
 			word = word.strip(string.punctuation).lower()
 			word_count[word] = word_count.get(word,0) + 1
 
-	for k,v in word_count.items():
+	
+	value_sorted = sorted(word_count.values())
+	print (value_sorted)
+	
+	for k,v in sorted(list(word_count.items())):
 	 	print("{} {}".format(k,v))
 
 
