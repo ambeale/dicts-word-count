@@ -1,8 +1,9 @@
 # put your code here.
 import string
+import sys
 
 def get_word_count(filename):
-	""" Read text file and return dictionary of word count 
+	""" Read text file and print word counts
 		
 		The function gets a text file as an input, and makes a dictionary of 
 		the words in the file with their count as their value.
@@ -25,5 +26,5 @@ def get_word_count(filename):
 
 	#return word_count
 
-get_word_count("test.txt")
+get_word_count(sys.argv[1])
 #get_word_count("twain.txt")
