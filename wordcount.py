@@ -13,12 +13,11 @@ def get_word_count(filename):
 	word_count={}
 
 	for line in poem:
-		line = line.strip()
-		words = line.split(" ")
+		words = line.strip().split(" ")
 		
 		for word in words:
-			word = word.strip(string.punctuation)
-			word_count[word.lower()] = word_count.get(word.lower(),0) + 1
+			word = word.strip(string.punctuation).lower()
+			word_count[word] = word_count.get(word,0) + 1
 
 	for k,v in word_count.items():
 	 	print("{} {}".format(k,v))
